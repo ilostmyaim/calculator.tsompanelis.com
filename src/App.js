@@ -14,7 +14,7 @@ const btnValues = [
 ];
 
 const App = () => {
-  let [cal, setCalc] = useState({
+  let [calc, setCalc] = useState({
   sign: "",
   num: 0,
   res: 0,});
