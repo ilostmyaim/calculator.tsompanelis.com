@@ -2,6 +2,7 @@ import Wrapper from "./components/Wrapper";
 import Screen from "./components/Screen";
 import ButtonBox from "./components/ButtonBox";
 import Button from "./components/Button";
+
 import React, { useState } from "react";
 
 
@@ -12,6 +13,12 @@ const btnValues = [
   [1, 2, 3, "+"],
   [0, ".", "="],
 ];
+
+
+const toLocaleString = (num) =>
+  String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, "$1 ");
+
+const removeSpaces = (num) => num.toString().replace(/\s/g, "");
 
 const App = () => {
   let [calc, setCalc] = useState({
