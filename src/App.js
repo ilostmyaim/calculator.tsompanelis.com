@@ -105,6 +105,14 @@ const App = () => {
     });
   };
 
+  const resetClickHandler = () => {
+    setCalc({
+      ...calc,
+      sign: "",
+      num: 0,
+      res: 0,
+    });
+  };
 
   return (
     <Wrapper>
